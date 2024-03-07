@@ -13,8 +13,6 @@ export default class Main extends Component {
   };
 
   componentDidMount() {
-    document.title = "Lista de tarefas";
-
     const tasks = JSON.parse(localStorage.getItem("tasks"));
 
     if (!tasks) return;
@@ -82,7 +80,7 @@ export default class Main extends Component {
     const { newTask, tasks } = this.state;
     return (
       <div className="main">
-        <h1>Task List</h1>
+        <h1>TODO App</h1>
 
         <Form
           handleSubmit={this.handleSubmit}
